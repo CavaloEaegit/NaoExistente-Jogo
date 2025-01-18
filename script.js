@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.appendChild(notification);
 
     // URL do arquivo raw do GitHub (altere conforme necessário)
-    const githubRawUrl = '';
+    const githubRawUrl = 'https://raw.githubusercontent.com/CavaloEaegit/NaoExistente-Jogo/refs/heads/main/Vsite.txt';
 
     // Função para verificar a versão do GitHub
     async function checkVersion() {
