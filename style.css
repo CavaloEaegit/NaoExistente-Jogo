@@ -34,8 +34,6 @@ header {
     left: 10px; /* Distância da lateral esquerda */
 }
 
-
-
 /* Texto no canto inferior direito */
 #site-version {
     position: fixed;
@@ -43,9 +41,9 @@ header {
     right: 20px;
     font-size: 14px;
     color: #ffffff;
-    background-color: #333333;
+    background-color: #3d3d3dd8;
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 0px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     z-index: 10;
 }
@@ -65,8 +63,6 @@ header {
     z-index: 100; /* Garante que o aviso fique acima de outros elementos */
 }
 
-
-
 /* Estilo para o texto NaoExiste */
 .titulo {
     font-size: 48px;
@@ -83,7 +79,6 @@ header {
         3px 3px 5px rgba(0, 0, 0, 0.7),  /* Sombra leve */
         6px 6px 10px rgba(0, 0, 0, 1.0);  /* Sombra mais pesada */
 }
-
 
 /* Layout principal */
 main {
@@ -110,7 +105,6 @@ main {
     object-fit: cover;
     transition: transform 0.1s linear; /* Suaviza o movimento */
 }
-
 
 /* Quadrado cinza para textos */
 .texto-quadrado {

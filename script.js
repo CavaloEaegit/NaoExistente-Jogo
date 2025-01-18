@@ -16,7 +16,6 @@ document.addEventListener("scroll", () => {
     }
 });
 
-
 document.addEventListener("DOMContentLoaded", () => {
     // Texto no canto inferior direito
     const versionText = document.createElement('div');
@@ -28,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const notification = document.createElement('div');
     notification.id = 'update-notification';
     notification.textContent = 'Atualiza a página/feche e reabra o app';
+    notification.style.display = 'none';  // Inicialmente escondido
     document.body.appendChild(notification);
 
     // URL do arquivo raw do GitHub (altere conforme necessário)
