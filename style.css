@@ -1,0 +1,140 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh; /* Altere para min-height para que o corpo ocupe toda a altura */
+    background-color: #f0f0f0;
+    overflow-x: hidden; /* Impede o scroll horizontal */
+}
+
+/* Estilo do ícone */
+header {
+    width: 100%;
+    position: fixed; /* Isso faz com que o ícone fique fixo no topo */
+    top: 0; /* Fixa o ícone no topo da página */
+    left: 0;
+    padding-top: 20px; /* Adiciona um pequeno espaço no topo para o ícone */
+    z-index: 10; /* Garante que o ícone fique acima de outros elementos */
+}
+
+.icone {
+    width: 50px;
+    height: auto;
+    position: fixed;
+    top: 20px; /* Distância do topo */
+    left: 10px; /* Distância da lateral esquerda */
+}
+
+
+
+/* Texto no canto inferior direito */
+#site-version {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #333333;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+/* Notificação para atualização */
+#update-notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 165, 0, 0.8); /* Cor amarela com 80% de opacidade */
+    color: #666;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0;
+    z-index: 100; /* Garante que o aviso fique acima de outros elementos */
+}
+
+
+
+/* Estilo para o texto NaoExiste */
+.titulo {
+    font-size: 48px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    top: -80px;
+    width: 100%;
+    z-index: 9;
+    /* Efeito trapezoidal */
+    transform: perspective(400px) scaleY(0.8);
+    text-shadow: 
+        3px 3px 5px rgba(0, 0, 0, 0.7),  /* Sombra leve */
+        6px 6px 10px rgba(0, 0, 0, 1.0);  /* Sombra mais pesada */
+}
+
+
+/* Layout principal */
+main {
+    display: flex;
+    width: 100%;
+    margin-top: 150px; /* Ajuste para começar após o ícone e título */
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Imagem grande (deve estar acima do fundo mas abaixo do título) */
+.imagem-grande img {
+    width: 800px; /* Ajuste a largura */
+    height: 800px; /* Ajuste a altura */
+    max-height: none; /* Sem limite para a altura */
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute; /* Fixa a imagem na tela */
+    top: 20%; /* Ajuste conforme necessário */
+    left: 0; /* Coloca a imagem na parte esquerda */
+    z-index: 2; /* Coloca a imagem acima do fundo */
+    object-fit: cover;
+    transition: transform 0.1s linear; /* Suaviza o movimento */
+}
+
+
+/* Quadrado cinza para textos */
+.texto-quadrado {
+    background-color: #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: absolute; /* Agora com position: absolute */
+    top: 0; /* Começa no topo */
+    right: 0; /* Alinhado à direita da tela */
+    width: 50vw; /* Ocupa metade da largura da tela */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    z-index: 3; /* Garante que fique acima da imagem grande */
+}
+
+/* Imagem de fundo */
+.fundo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180%;
+    object-fit: cover;
+    z-index: 1; /* Coloca o fundo abaixo da imagem grande */
+    transform: translateY(0);
+    transition: transform 0.1s linear;
+}

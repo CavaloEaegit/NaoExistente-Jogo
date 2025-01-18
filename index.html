@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-    <title>Olá, Mundo!</title>
-    <script>
-        function onButtonClick() {
-            alert("Olá, Mundo!");
-        }
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Um Teste</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button onclick="onButtonClick()">Clique aqui!</button>
+    <header>
+        <img src="icone.png" alt="Ícone" class="icone">
+    </header>
+    <main>
+        <h1 class="titulo">Não Existente</h1>
+        <div class="imagem-grande">
+            <img src="imagem.png" alt="Imagem Grande">
+        </div>
+        <div class="texto-quadrado">
+            <h1>Notas?</h1>
+            <p>V0.01</p>
+            <p>Você pode adicionar mais texto aqui.</p>
+        </div>
+    </main>
+    <img src="Fundo.png" alt="Fundo" class="fundo">
+    
+    <!-- Aqui fica o texto no canto inferior direito e a notificação de atualização -->
+    <div id="site-version"></div>
+    <div id="update-notification"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
