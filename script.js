@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const notification = document.createElement('div');
     notification.id = 'update-notification';
     notification.style.display = 'none'; // Começa invisível
-    notification.textContent = 'Atualiza a página/feche e reabra o app';
+    notification.textContent = 'Atualiza a página/feche e reabra o app, caso a versão continuar a mesma, aguarde alguns minutos e atualiza denovo...';
     document.body.appendChild(notification);
 
     // URL do arquivo raw do GitHub (altere conforme necessário)
