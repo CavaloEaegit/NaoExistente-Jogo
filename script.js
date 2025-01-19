@@ -20,14 +20,14 @@ document.addEventListener("DOMContentLoaded", () => {
     // Texto no canto inferior direito
     const versionText = document.createElement('div');
     versionText.id = 'site-version';
-    versionText.textContent = 'Versão V0.0.3 Alpha(Do site)';  // Versão atual
+    versionText.textContent = 'Versão V0.0.3 Alpha(do site)'; // Versão atual
     document.body.appendChild(versionText);
 
     // Notificação de atualização
     const notification = document.createElement('div');
     notification.id = 'update-notification';
+    notification.style.display = 'none'; // Começa invisível
     notification.textContent = 'Atualiza a página/feche e reabra o app';
-    notification.style.display = 'none';  // Inicialmente escondido
     document.body.appendChild(notification);
 
     // URL do arquivo raw do GitHub (altere conforme necessário)
@@ -39,16 +39,17 @@ document.addEventListener("DOMContentLoaded", () => {
             const response = await fetch(githubRawUrl);
             const githubVersion = await response.text();
 
-            // Versão que vem do arquivo raw no GitHub
-            if (githubVersion.trim() !== '0.0.3') {  // Comparando com a versão do site
-                // Se as versões não coincidirem, mostra a notificação
-                notification.style.display = 'block';
+            // Verifica se a versão do GitHub é diferente da versão do site
+            if (githubVersion.trim() !== '0.0.3') {
+                notification.style.display = 'block'; // Mostra a notificação
+            } else {
+                notification.style.display = 'none'; // Oculta a notificação se estiver atualizado
             }
         } catch (error) {
             console.error('Erro ao verificar versão:', error);
         }
     }
 
-    // Verificar versão ao carregar o site
-    checkVersion();
+    // Verificar versão a cada 1 segundo
+    setInterval(checkVersion, 1000);
 });
