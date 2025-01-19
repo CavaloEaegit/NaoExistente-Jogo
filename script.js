@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Texto no canto inferior direito
     const versionText = document.createElement('div');
     versionText.id = 'site-version';
-    versionText.textContent = 'Versão V0.0.3 Alpha(do site)'; // Versão atual
+    versionText.textContent = 'Versão V0.0.4 Alpha(do site)'; // Versão atual
     document.body.appendChild(versionText);
 
     // Notificação de atualização
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const githubVersion = await response.text();
 
             // Verifica se a versão do GitHub é diferente da versão do site
-            if (githubVersion.trim() !== '0.0.3') {
+            if (githubVersion.trim() !== '0.0.4') {
                 notification.style.display = 'block'; // Mostra a notificação
             } else {
                 notification.style.display = 'none'; // Oculta a notificação se estiver atualizado
