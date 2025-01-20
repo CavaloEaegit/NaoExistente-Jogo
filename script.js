@@ -1,17 +1,17 @@
 document.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
 
-    // Movimento do fundo (parallax mais lento)
+    // Movimento do fundo (mais lento)
     const fundo = document.querySelector(".fundo");
     if (fundo) {
         const offset = -scrollY * 0.3; // Ajuste o fator de parallax (0.3 para movimento mais perceptível)
         fundo.style.transform = `translateY(${offset}px)`;
     }
 
-    // Movimento da imagem grande (parallax mais rápido)
+    // Movimento da imagem grande (mais rápido)
     const imagemGrande = document.querySelector(".imagem-grande img");
     if (imagemGrande) {
-        const offset = scrollY * 0.4; // Ajuste o fator de parallax (0.6 para movimento mais rápido)
+        const offset = scrollY * 0.4; // Ajuste o fator (0.6 para movimento mais rápido)
         imagemGrande.style.transform = `translateY(${offset}px)`;
     }
 });

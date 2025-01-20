@@ -1,4 +1,4 @@
-/* Reset básico */
+/* Reset basico */
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    min-height: 100vh; /* Altere para min-height para que o corpo ocupe toda a altura */
+    min-height: 100vh; 
     background-color: #f0f0f0;
     overflow-x: hidden; /* Impede o scroll horizontal */
 }
@@ -73,7 +73,6 @@ header {
     top: -80px;
     width: 100%;
     z-index: 9;
-    /* Efeito trapezoidal */
     transform: perspective(400px) scaleY(0.8);
     text-shadow: 
         3px 3px 5px rgba(0, 0, 0, 0.7),  /* Sombra leve */
@@ -84,21 +83,20 @@ header {
 main {
     display: flex;
     width: 100%;
-    margin-top: 150px; /* Ajuste para começar após o ícone e título */
+    margin-top: 150px;
     gap: 20px;
     align-items: center;
     justify-content: center;
     position: relative;
 }
 
-/* Imagem grande (deve estar acima do fundo mas abaixo do título) */
 .imagem-grande img {
     width: 800px; /* Ajuste a largura */
     height: 800px; /* Ajuste a altura */
     max-height: none; /* Sem limite para a altura */
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: absolute; /* Fixa a imagem na tela */
+    position: absolute;
     top: 20%; /* Ajuste conforme necessário */
     left: 0; /* Coloca a imagem na parte esquerda */
     z-index: 2; /* Coloca a imagem acima do fundo */
@@ -112,7 +110,7 @@ main {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: absolute; /* Agora com position: absolute */
+    position: absolute;
     top: 0; /* Começa no topo */
     right: 0; /* Alinhado à direita da tela */
     width: 50vw; /* Ocupa metade da largura da tela */
